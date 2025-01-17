@@ -43,6 +43,7 @@ body.glass-theme {
   margin-bottom: 20px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  
 }
 
 .glass-section:hover {
@@ -334,6 +335,19 @@ p1 {
   transition: all 0.3s ease;
 }
 
+.tech-icons-link:nth-child(2){
+  transition-delay: 200ms;
+}
+.tech-icons-link:nth-child(3){
+  transition-delay: 300ms;
+}
+.tech-icons-link:nth-child(4){
+  transition-delay: 400ms;
+}
+.tech-icons-link:nth-child(5){
+  transition-delay: 500ms;
+}
+
 .tech-icons-exp{
   color: #ffffff;
   font-size: 1em;
@@ -351,6 +365,22 @@ p1 {
   flex: 0 0 auto; /* Prevent icons from shrinking or stretching */
   font-size: 1.2em; /* Adjust icon size for readability */
   padding: 2px;
+}
+
+.tech-icons-exp:nth-child(2){
+  transition-delay: 200ms;
+}
+.tech-icons-exp:nth-child(3){
+  transition-delay: 300ms;
+}
+.tech-icons-exp:nth-child(4){
+  transition-delay: 400ms;
+}
+.tech-icons-exp:nth-child(5){
+  transition-delay: 500ms;
+}
+.tech-icons-exp:nth-child(6){
+  transition-delay: 600ms;
 }
 
 /* Back to Top Button styles */
@@ -383,32 +413,19 @@ p1 {
   transition: 0.75f;
 }
 
-/* Sticky Footer */
-.sticky-footer {
-  position: fixed;
-  margin: 0;
-  bottom: 0;
-  width: 52.5%;
-  left: 50%; /* Position it halfway across the viewport */
-  transform: translateX(-50%); /* Offset by half its width for perfect centering */
-  background: rgba(255, 255, 255, 0.1); /* Glass effect background */
-  backdrop-filter: blur(10px); /* Optional for the glass effect */
-  /* padding: 10px 20px; */
-  text-align: center;
-  z-index: 1000; /* Ensures it stays on top */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for visual separation */
-  border-radius: 100px; /* Optional for rounded edges */
+/* Animation display when on view port */
+
+.hidden-glass {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  transition: all 1s;
 }
 
-.sticky-footer a {
-  margin: 0 10px;
-  font-size: 20px;
-  color: white; /* Adjust based on your theme */
-  transition: color 0.3s ease;
-}
-
-.sticky-footer a:hover {
-  color: #00aaff; /* Change color on hover */
+.show-glass {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
 
 /* Wave Pattern BG */
