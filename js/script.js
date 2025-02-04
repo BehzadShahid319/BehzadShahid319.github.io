@@ -47,9 +47,9 @@ function sleep(ms) {
               entry.target.classList.add('show-glass');
           }
           // Uncomment if you want to remove the class when not intersecting
-          else {
-              entry.target.classList.remove('show-glass');
-          }
+        //   else {
+        //       entry.target.classList.remove('show-glass');
+        //   }
       }
   });
 
