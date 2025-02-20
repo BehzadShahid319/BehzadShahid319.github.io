@@ -149,6 +149,12 @@ p1 {
   margin-top: 10px;
 }
 
+.education-list li:hover .details {
+  max-height: 500px; /* Adjust based on your content */
+  opacity: 1;
+  margin-top: 10px;
+}
+
 /* Footer */
 .footer {
   text-align: center;
