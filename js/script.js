@@ -57,3 +57,17 @@ const hiddenElements = document.querySelectorAll('.hidden-glass');
 hiddenElements.forEach((element)=>{
     observer.observe(element);
 });
+
+//Hamburger Menu
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+
+// Auto-hide sidebar on mobile when a link is clicked
+document.querySelectorAll(".sidebar a").forEach(link => {
+    link.addEventListener("click", function () {
+        if (window.innerWidth <= 768) { // Only hide in mobile view
+            document.getElementById("sidebar").classList.remove("active");
+        }
+    });
+});

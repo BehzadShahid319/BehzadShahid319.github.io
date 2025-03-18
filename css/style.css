@@ -389,6 +389,85 @@ p1 {
   transition-delay: 600ms;
 }
 
+.sidebar {
+  position: fixed; /* Keep it on the left side */
+  left: 8%;
+  top: 4.5%;
+  width: 15%; /* Adjust width as needed */
+  height: auto; /* Full height */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  z-index: 1001;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.hamburger{
+  display: none;
+}
+
+@media (min-width: 1458px) and (max-width: 1919px) {
+  .sidebar {
+      left: 1%; /* Move more to the left */
+      width: 14%; /* Reduce width */
+  }
+}
+
+/* Hide sidebar in mobile view */
+@media (max-width: 1458px) {
+  .sidebar {
+    position: fixed;
+    left: -125%; /* Hide it initially */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    transition: left 0.1s ease-in-out;
+  }
+
+  /* Show sidebar when active */
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* Hamburger Button */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger img{
+    max-width: 10%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+  }
+}
+
 /* Back to Top Button styles */
 #backToTop {
   position: fixed;
